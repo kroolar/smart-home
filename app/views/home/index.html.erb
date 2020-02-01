@@ -1,0 +1,23 @@
+<section class="output">
+
+  <% @out.each do |o| %>
+    <div class="output__wrapper">
+    
+	  <% button_class = "output__button" %>
+      <% button_class += o.active ? " button--on" : " button--off" %>
+      <% button_class += " button--light" if o.typeof == "Oświetlenie" %>
+      <% button_class += " button--socket" if o.typeof == "Gniazdo" %>
+      <% button_class += " button--other" if o.typeof == "Inne" %>
+
+	  <%= button_to "", home_path(o.id), :method => :delete, class: "output__remove", data: {confirm: "Czy na pewno chcesz usunąć ten element?"} %>
+	  
+	  <%= link_to "", edit_home_path(o.id), class: "output__edit" %>
+	  
+	  <%= button_to "", home_path(o.id), :method => :patch, class: button_class %>
+
+	  <h2 class="output__title" > <%= o.name %> </h2>
+	  
+	</div>
+  <% end %>
+</section>
+

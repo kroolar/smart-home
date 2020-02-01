@@ -1,0 +1,29 @@
+<section class="form">
+  <%= form_with model: @out, url: home_path, method: :patch  do |f| %>
+	
+    <h1 class="form__header">Edytuj wyjście</h1>
+    <div class="form__field form__field--input">
+      <%= f.label :name, "Nazwa", :class => "form__label" %>
+      <%= f.text_field :name, :class => "form__input" %>
+    </div>
+    
+    <div class="form__field form__field--select">
+      <%= f.label :name, "Numer wyjścia", :class => "form__label" %>
+      <%= f.select :number, options_for_select(Out.exist_outputs(@out.number)), :class => "form__select" %>
+    </div>
+    
+    <div class="form__field form__field--select">
+      <%= f.label :name, "Typ wyjścia", :class => "form__label" %>
+      <%= f.select :typeof, options_for_select(["Oświetlenie", "Gniazdo", "Inne"]), :class => "form__select" %>
+    </div>
+    
+    <div class="form__field form__field--select">
+      <%= f.label :name, "Stan wyjścia", :class => "form__label" %>
+      <%= f.select :string, options_for_select(["Wyłączony", "Włączony"]), :class => "form__select" %>
+    </div>
+    
+    <div class="form__field">
+		<%= f.submit "Dodaj wyjście", :class => "form__submit" %>
+	</div>
+  <% end %>
+</section>

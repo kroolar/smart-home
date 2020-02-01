@@ -1,0 +1,115 @@
+.output
+  margin-top: 50px
+  width: 100%
+  display: flex
+  flex-wrap: wrap
+  @media(min-width: 1024px)
+    background-color: rgb(250,250,250)
+    margin-top: 0
+
+  &__wrapper
+    position: relative
+    width: 50%
+    height: 50vw
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    margin-top: 20px
+    @media(min-width: 1024px)
+      width: 25%
+      height: 25vw
+      margin-top: 0px
+
+  &__button
+    width: 120px
+    height: 120px
+    background-color: transparent
+    border: 3px solid rgb(100,100,100)
+    border-radius: 50%
+    font-size: 22px
+    background-size: 70px
+    transition: 300ms
+    @media(min-width: 1024px)
+      width: 200px
+      height: 200px
+      border: 5px solid rgb(100,100,100)
+
+.button--light
+  background: url('idea.png') no-repeat center center
+  background-size: 70px
+  @media(min-width: 1024px)
+    background-size: 120px
+
+
+.button--socket
+  background: url('plug.png') no-repeat center center
+  background-size: 60px
+  @media(min-width: 1024px)
+    background-size: 110px
+
+.button--other
+  background: url('switch.png') no-repeat center center
+  background-size: 60px
+  @media(min-width: 1024px)
+    background-size: 100px
+
+.button--off
+  background-color: rgba(255,0,0,0.5)
+  &:focus
+    background-color: rgba(0,255,0,0.5)
+
+.button--on
+  background-color: rgba(0,255,0,0.5)
+  &:focus
+    background-color: rgba(255,0,0,0.5)
+
+.output__button
+  outline: none
+  
+.output-title
+  font-size: 22px
+  font-weight: 300
+  
+
+.output__remove,
+.output__edit
+  position: absolute
+  display: flex
+  justify-content: center
+  align-items: center
+  font-size: 18px
+  top: calc(50% - 90px)
+  left: calc(50% + 35px) 
+  height: 25px
+  width: 25px
+  border-radius: 50%
+  border: none
+  color: red
+  font-weight: 900
+  line-height: 20px
+  background-color: white
+  @media(min-width: 1024px)
+    top: calc(50% - 130px)
+    left: calc(50% + 70px)
+    height: 40px
+    width: 40px
+    
+.output__edit
+  top: calc(50% - 65px)
+  left: calc(50% + 55px)
+  border: 3px solid black
+  background: url('writing.svg') no-repeat center center
+  background-color: rgb(100,100,200)
+  background-size: 24px
+  @media(min-width: 1024px)
+    top: calc(50% - 90px)
+    left: calc(50% + 100px)
+
+.output__remove
+  background: url('quit.svg') no-repeat center center
+  background-size: 60px
+  cursor: pointer
+
+
+
